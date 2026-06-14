@@ -6,7 +6,6 @@ frontend:
         - npm install -g pnpm
         - pnpm install --ignore-scripts
         - pnpm exec prisma generate
-        - pnpm exec prisma migrate deploy
     build:
       commands:
         - pnpm run build
