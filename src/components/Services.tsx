@@ -2,8 +2,8 @@ import { Zap, MessageSquare, Clock, Calendar } from "lucide-react";
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 px-4 sm:px-6">
-      <div className="max-w-5xl mx-auto">
+    <section id="services" className="py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="text-center mb-14">
           <p className="text-xs font-medium tracking-widest text-amber-400 uppercase mb-3">
@@ -27,7 +27,7 @@ export default function Services() {
               </div>
 
               <h3 className="text-2xl font-bold text-white mb-1">
-                PATO CALL
+                夜伽CALL
               </h3>
               <p className="text-amber-400 text-sm font-medium mb-4">
                 最短30分でキャストが来る
@@ -53,7 +53,7 @@ export default function Services() {
               </div>
 
               <button className="w-full gold-gradient text-black font-semibold py-3 rounded-xl text-sm hover:opacity-90 transition-opacity">
-                PATO CALLを使う
+                夜伽CALLを使う
               </button>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function Services() {
               </div>
 
               <h3 className="text-2xl font-bold text-white mb-1">
-                CO-PATO
+                御同伴
               </h3>
               <p className="text-zinc-400 text-sm font-medium mb-4">
                 メッセージで日程調整
@@ -94,7 +94,7 @@ export default function Services() {
               </div>
 
               <button className="w-full bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-[#3a3a3a] text-white font-semibold py-3 rounded-xl text-sm transition-colors">
-                CO-PATOを使う
+                御同伴を予約する
               </button>
             </div>
           </div>

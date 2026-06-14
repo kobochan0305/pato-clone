@@ -6,7 +6,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <a href="/" className="text-3xl font-bold tracking-widest gold-text">
-            pato
+            夜伽会
           </a>
           <p className="text-zinc-500 text-sm mt-2">無料で新規登録</p>
           <div className="inline-flex items-center gap-2 mt-3 bg-amber-900/20 border border-amber-500/30 rounded-full px-4 py-1.5">

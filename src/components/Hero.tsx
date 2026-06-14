@@ -22,22 +22,39 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 luxury-border rounded-full px-4 py-1.5 mb-8 bg-[#141414]">
           <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
           <span className="text-xs text-amber-400 font-medium tracking-widest uppercase">
-            No.1 エンタメマッチングサービス
+            Z李 監修 — 公式マッチング
           </span>
         </div>
 
         {/* Main headline */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
-          <span className="text-white">本物を知っている</span>
+          <span className="text-white">Z李が暴いてきた業界を、</span>
           <br />
-          <span className="text-white">人だけが使っている</span>
+          <span className="gold-text">今度は正しく作る。</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-zinc-400 mb-4 max-w-2xl mx-auto leading-relaxed">
-          最短30分で厳選キャストがあなたのもとへ。
+        <p className="text-lg sm:text-xl text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+          業界の裏を知り尽くした男が選んだ、15,000名のキャスト。
           <br className="hidden sm:block" />
-          15,000名以上のプレミアムキャストからあなただけの体験を。
+          嘘のない夜を、本物の男に。
         </p>
+
+        {/* Z李 Quote */}
+        <div className="mb-10 mx-auto max-w-lg">
+          <div className="luxury-border bg-[#141414] rounded-2xl p-5 text-left">
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-full gold-gradient flex items-center justify-center shrink-0 text-black font-bold text-xs">
+                Z李
+              </div>
+              <div>
+                <p className="text-xs text-amber-400 font-medium mb-1 tracking-wider">監修コメント — Z李</p>
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  「俺が長年この業界の裏を暴いてきたからこそ、本物だけを残したサービスが作れた。採用率10%の審査を俺自身が設計した。」
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Stats row */}
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mb-10 text-sm text-zinc-500">

@@ -52,7 +52,7 @@ export default function CastDetail({ cast }: { cast: Cast }) {
             <ArrowLeft size={18} />
           </Link>
           <a href="/" className="text-xl font-bold tracking-widest gold-text">
-            pato
+            夜伽会
           </a>
         </div>
 
@@ -140,7 +140,7 @@ export default function CastDetail({ cast }: { cast: Cast }) {
             >
               <Zap size={18} />
               <div className="text-left">
-                <div className="text-sm font-bold">PATO CALLで呼ぶ</div>
+                <div className="text-sm font-bold">夜伽CALLで呼ぶ</div>
                 <div className="text-xs font-normal opacity-70">最短30分で到着</div>
               </div>
             </button>
@@ -151,7 +151,7 @@ export default function CastDetail({ cast }: { cast: Cast }) {
             >
               <MessageSquare size={18} className="text-zinc-400" />
               <div className="text-left">
-                <div className="text-sm font-bold">CO-PATOでメッセージ</div>
+                <div className="text-sm font-bold">御同伴でメッセージ</div>
                 <div className="text-xs font-normal text-zinc-500">日程を事前調整</div>
               </div>
             </button>

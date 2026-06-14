@@ -23,7 +23,7 @@ const steps = [
     icon: Sparkles,
     step: "04",
     title: "マッチング開始",
-    desc: "PATO CALLなら最短30分、CO-PATOなら事前にメッセージで日程を調整してスタート。",
+    desc: "夜伽CALLなら最短30分、御同伴なら事前にメッセージで日程を調整してスタート。",
   },
 ];
 

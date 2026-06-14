@@ -10,10 +10,10 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "pato - No.1エンタメマッチングサービス",
+  title: "夜伽会 — Z李 監修 公式マッチング",
   description:
-    "本物を知っている人だけが使っている。最短30分で厳選キャストがあなたのもとへ。15,000名以上の厳選キャストからあなただけのエンタメ体験を。",
-  keywords: "マッチング, エンタメ, キャスト, エグゼクティブ, パト",
+    "Z李が暴いてきた業界を、今度は正しく作る。業界の裏を知り尽くした男が選んだ15,000名の厳選キャスト。嘘のない夜を、本物の男に。",
+  keywords: "夜伽会, Z李, マッチング, キャスト, エグゼクティブ, 監修",
 };
 
 export default function RootLayout({

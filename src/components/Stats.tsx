@@ -14,8 +14,8 @@ const incomeData = [
 
 export default function Stats() {
   return (
-    <section className="py-20 px-4 sm:px-6 bg-[#0d0d0d]">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-20 bg-[#0d0d0d]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="text-center mb-14">
           <p className="text-xs font-medium tracking-widest text-amber-400 uppercase mb-3">

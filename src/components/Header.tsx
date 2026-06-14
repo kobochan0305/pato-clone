@@ -10,9 +10,12 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#2a2a2a]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <span className="text-2xl font-bold tracking-widest gold-text">
-            pato
+            夜伽会
+          </span>
+          <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-bold tracking-wider border border-amber-500/40 text-amber-400 bg-amber-900/20 px-2 py-0.5 rounded-full">
+            Z李 監修
           </span>
         </div>
 

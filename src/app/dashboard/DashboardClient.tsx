@@ -87,7 +87,7 @@ export default function DashboardClient({
       {/* Header */}
       <div className="border-b border-[#1e1e1e] bg-[#0a0a0a]/90 backdrop-blur-md sticky top-0 z-40 px-4 sm:px-6 h-14 flex items-center justify-between">
         <a href="/" className="text-xl font-bold tracking-widest gold-text">
-          pato
+          夜伽会
         </a>
         <div className="flex items-center gap-3">
           <Link href="/casts" className="text-xs text-zinc-400 hover:text-white transition-colors">
@@ -188,7 +188,7 @@ export default function DashboardClient({
               <Zap size={18} className="text-black" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">PATO CALL</p>
+              <p className="text-sm font-semibold text-white">夜伽CALL</p>
               <p className="text-xs text-zinc-500">最短30分でキャストを呼ぶ</p>
             </div>
           </Link>
@@ -201,7 +201,7 @@ export default function DashboardClient({
               <MessageSquare size={18} className="text-zinc-400" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">CO-PATO</p>
+              <p className="text-sm font-semibold text-white">御同伴</p>
               <p className="text-xs text-zinc-500">日程を調整して予約</p>
             </div>
           </Link>

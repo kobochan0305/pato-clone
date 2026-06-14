@@ -7,7 +7,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <a href="/" className="text-3xl font-bold tracking-widest gold-text">
-            pato
+            夜伽会
           </a>
           <p className="text-zinc-500 text-sm mt-2">アカウントにログイン</p>
         </div>

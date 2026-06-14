@@ -8,7 +8,7 @@ export default function CTASection() {
         <div className="flex items-center gap-4 justify-center mb-8">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-500/50" />
           <span className="text-amber-400 text-xs tracking-widest uppercase font-medium">
-            Join pato
+            Join 夜伽会
           </span>
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-500/50" />
         </div>

@@ -1,12 +1,16 @@
 import { Star, MapPin } from "lucide-react";
 
+function pexels(id: number) {
+  return `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=400&h=533&fit=crop`;
+}
+
 const casts = [
-  { name: "Ai",     age: 24, area: "東京",  type: "プレミアム",  score: 4.9, count: 213, photo: "https://randomuser.me/api/portraits/women/1.jpg" },
-  { name: "Haruka", age: 27, area: "東京",  type: "VIP",        score: 4.8, count: 187, photo: "https://randomuser.me/api/portraits/women/2.jpg" },
-  { name: "Mio",    age: 22, area: "大阪",  type: "プレミアム",  score: 4.9, count: 145, photo: "https://randomuser.me/api/portraits/women/3.jpg" },
-  { name: "Saki",   age: 26, area: "東京",  type: "ロイヤルVIP", score: 5.0, count: 98,  photo: "https://randomuser.me/api/portraits/women/4.jpg" },
-  { name: "Nana",   age: 23, area: "名古屋", type: "プレミアム", score: 4.7, count: 162, photo: "https://randomuser.me/api/portraits/women/5.jpg" },
-  { name: "Rina",   age: 25, area: "東京",  type: "VIP",        score: 4.8, count: 201, photo: "https://randomuser.me/api/portraits/women/6.jpg" },
+  { name: "Ai",     age: 24, area: "東京",  type: "プレミアム",  score: 4.9, count: 213, photo: pexels(35390360) },
+  { name: "Haruka", age: 27, area: "東京",  type: "VIP",        score: 4.8, count: 187, photo: pexels(29384024) },
+  { name: "Mio",    age: 22, area: "大阪",  type: "プレミアム",  score: 4.9, count: 145, photo: pexels(29384032) },
+  { name: "Saki",   age: 26, area: "東京",  type: "ロイヤルVIP", score: 5.0, count: 98,  photo: pexels(31256203) },
+  { name: "Nana",   age: 23, area: "名古屋", type: "プレミアム", score: 4.7, count: 162, photo: pexels(31403197) },
+  { name: "Rina",   age: 25, area: "東京",  type: "VIP",        score: 4.8, count: 201, photo: pexels(10285637) },
 ];
 
 const typeColor: Record<string, string> = {
@@ -17,8 +21,8 @@ const typeColor: Record<string, string> = {
 
 export default function CastPreview() {
   return (
-    <section className="py-20 px-4 sm:px-6 bg-[#0d0d0d]">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-20 bg-[#0d0d0d]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="text-center mb-14">
           <p className="text-xs font-medium tracking-widest text-amber-400 uppercase mb-3">
@@ -78,9 +82,9 @@ export default function CastPreview() {
         </div>
 
         <div className="text-center mt-8">
-          <button className="border border-[#3a3a3a] hover:border-amber-500/30 text-zinc-400 hover:text-white font-medium px-8 py-3 rounded-full text-sm transition-all">
+          <a href="/casts" className="inline-block border border-[#3a3a3a] hover:border-amber-500/30 text-zinc-400 hover:text-white font-medium px-8 py-3 rounded-full text-sm transition-all">
             すべてのキャストを見る →
-          </button>
+          </a>
         </div>
       </div>
     </section>
