@@ -14,6 +14,7 @@ type Cast = {
   reviewCount: number;
   available: boolean;
   bio: string;
+  photos: string;
 };
 
 const AREAS = ["all", "東京", "大阪", "名古屋", "横浜", "福岡"];
@@ -127,11 +128,16 @@ export default function CastList() {
             >
               {/* Photo */}
               <div className="relative aspect-[3/4] bg-gradient-to-br from-[#1e1e1e] to-[#2a2a2a] overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl font-light text-zinc-600">
-                    {cast.displayName[0]}
-                  </span>
-                </div>
+                {(() => {
+                  const first = JSON.parse(cast.photos ?? "[]")[0];
+                  return first ? (
+                    <img src={first} alt={cast.displayName} className="absolute inset-0 w-full h-full object-cover" />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-6xl font-light text-zinc-600">{cast.displayName[0]}</span>
+                    </div>
+                  );
+                })()}
                 <div className="absolute top-3 left-3">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${TIER_COLOR[cast.tier]}`}>
                     {TIER_LABEL[cast.tier]}

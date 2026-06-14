@@ -23,6 +23,7 @@ type Cast = {
   rating: number;
   reviewCount: number;
   available: boolean;
+  photos: string;
   reviewsReceived: Review[];
 };
 
@@ -59,10 +60,17 @@ export default function CastDetail({ cast }: { cast: Cast }) {
           {/* Profile header */}
           <div className="flex gap-6 mb-8">
             {/* Photo */}
-            <div className="w-28 h-36 sm:w-36 sm:h-48 rounded-2xl bg-gradient-to-br from-[#1e1e1e] to-[#2a2a2a] flex items-center justify-center shrink-0 luxury-border">
-              <span className="text-5xl font-light text-zinc-500">
-                {cast.displayName[0]}
-              </span>
+            <div className="w-28 h-36 sm:w-36 sm:h-48 rounded-2xl overflow-hidden shrink-0 luxury-border bg-gradient-to-br from-[#1e1e1e] to-[#2a2a2a]">
+              {(() => {
+                const first = JSON.parse(cast.photos ?? "[]")[0];
+                return first ? (
+                  <img src={first} alt={cast.displayName} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-5xl font-light text-zinc-500">{cast.displayName[0]}</span>
+                  </div>
+                );
+              })()}
             </div>
 
             <div className="flex-1 min-w-0">

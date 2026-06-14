@@ -1,12 +1,12 @@
 import { Star, MapPin } from "lucide-react";
 
 const casts = [
-  { name: "Ai", age: 24, area: "東京", type: "プレミアム", score: 4.9, count: 213 },
-  { name: "Haruka", age: 27, area: "東京", type: "VIP", score: 4.8, count: 187 },
-  { name: "Mio", age: 22, area: "大阪", type: "プレミアム", score: 4.9, count: 145 },
-  { name: "Saki", age: 26, area: "東京", type: "ロイヤルVIP", score: 5.0, count: 98 },
-  { name: "Nana", age: 23, area: "名古屋", type: "プレミアム", score: 4.7, count: 162 },
-  { name: "Rina", age: 25, area: "東京", type: "VIP", score: 4.8, count: 201 },
+  { name: "Ai",     age: 24, area: "東京",  type: "プレミアム",  score: 4.9, count: 213, photo: "https://randomuser.me/api/portraits/women/1.jpg" },
+  { name: "Haruka", age: 27, area: "東京",  type: "VIP",        score: 4.8, count: 187, photo: "https://randomuser.me/api/portraits/women/2.jpg" },
+  { name: "Mio",    age: 22, area: "大阪",  type: "プレミアム",  score: 4.9, count: 145, photo: "https://randomuser.me/api/portraits/women/3.jpg" },
+  { name: "Saki",   age: 26, area: "東京",  type: "ロイヤルVIP", score: 5.0, count: 98,  photo: "https://randomuser.me/api/portraits/women/4.jpg" },
+  { name: "Nana",   age: 23, area: "名古屋", type: "プレミアム", score: 4.7, count: 162, photo: "https://randomuser.me/api/portraits/women/5.jpg" },
+  { name: "Rina",   age: 25, area: "東京",  type: "VIP",        score: 4.8, count: 201, photo: "https://randomuser.me/api/portraits/women/6.jpg" },
 ];
 
 const typeColor: Record<string, string> = {
@@ -40,13 +40,9 @@ export default function CastPreview() {
               key={i}
               className="dark-card rounded-2xl overflow-hidden group hover:border-amber-500/20 transition-all duration-300 cursor-pointer"
             >
-              {/* Photo placeholder */}
+              {/* Photo */}
               <div className="relative aspect-[3/4] bg-gradient-to-br from-[#1e1e1e] to-[#2a2a2a] overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-5xl font-light text-zinc-600">
-                    {cast.name[0]}
-                  </div>
-                </div>
+                <img src={cast.photo} alt={cast.name} className="absolute inset-0 w-full h-full object-cover" />
 
                 {/* Type badge */}
                 <div className="absolute top-3 left-3">

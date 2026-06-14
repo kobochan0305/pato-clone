@@ -2,6 +2,19 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
+import {
+  CognitoIdentityProviderClient,
+  SignUpCommand,
+  AdminConfirmSignUpCommand,
+} from "@aws-sdk/client-cognito-identity-provider";
+
+const cognitoClient = new CognitoIdentityProviderClient({
+  region: process.env.COGNITO_REGION ?? "ap-northeast-1",
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+  },
+});
 
 const schema = z.object({
   name: z.string().min(1).max(50),
@@ -24,6 +37,22 @@ export async function POST(req: Request) {
   }
 
   const passwordHash = await bcrypt.hash(password, 12);
+
+  // Cognitoにユーザー作成（失敗しても登録は続行）
+  try {
+    await cognitoClient.send(new SignUpCommand({
+      ClientId: process.env.COGNITO_CLIENT_ID!,
+      Username: email,
+      Password: password,
+      UserAttributes: [{ Name: "name", Value: name }],
+    }));
+    await cognitoClient.send(new AdminConfirmSignUpCommand({
+      UserPoolId: process.env.COGNITO_USER_POOL_ID!,
+      Username: email,
+    }));
+  } catch {
+    // Cognitoエラーは無視してDBのみで続行
+  }
 
   const user = await prisma.user.create({
     data: {

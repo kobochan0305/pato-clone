@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local mcp config
+.mcp.json
+
 # database
 **/*.db
 **/*.db-journal
