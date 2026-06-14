@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useSession } from "next-auth/react";
 import { Star, MapPin, ArrowLeft, Zap, MessageSquare, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import BookingModal from "./BookingModal";
@@ -40,13 +39,12 @@ const TIER_PRICE: Record<string, { half: string; points: number }> = {
   ROYAL_VIP: { half: "¥15,000", points: 12500 },
 };
 
-export default function CastDetail({ cast }: { cast: Cast }) {
+export default function CastDetail({ cast, isLoggedIn }: { cast: Cast; isLoggedIn: boolean }) {
   const [bookingType, setBookingType] = useState<"PATO_CALL" | "CO_PATO" | null>(null);
-  const { data: session } = useSession();
   const price = TIER_PRICE[cast.tier];
 
   function handleBooking(type: "PATO_CALL" | "CO_PATO") {
-    if (!session) {
+    if (!isLoggedIn) {
       window.location.href = "/login";
       return;
     }
