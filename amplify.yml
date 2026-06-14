@@ -4,7 +4,8 @@ frontend:
     preBuild:
       commands:
         - npm install -g pnpm
-        - pnpm install
+        - pnpm install --ignore-scripts
+        - pnpm exec prisma generate
         - pnpm exec prisma migrate deploy
     build:
       commands:
