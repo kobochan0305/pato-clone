@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
         userId: session.user.id,
         amount: -pointsCost,
         type: "USE",
-        description: `${cast.displayName}への${type === "PATO_CALL" ? "PATO CALL" : "CO-PATO"}予約`,
+        description: `${cast.displayName}への${type === "PATO_CALL" ? "夜伽CALL" : "御同伴"}予約`,
       },
     }),
   ]);

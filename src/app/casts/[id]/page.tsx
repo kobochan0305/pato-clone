@@ -6,7 +6,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   const cast = await prisma.castProfile.findUnique({ where: { id } });
   if (!cast) return { title: "Not found" };
-  return { title: `${cast.displayName} | pato` };
+  return { title: `${cast.displayName} | 夜伽会` };
 }
 
 export default async function CastPage({ params }: { params: Promise<{ id: string }> }) {

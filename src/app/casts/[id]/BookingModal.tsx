@@ -74,7 +74,7 @@ export default function BookingModal({
               <MessageSquare size={16} className="text-zinc-400" />
             )}
             <h2 className="text-sm font-semibold text-white">
-              {type === "PATO_CALL" ? "PATO CALL" : "CO-PATO"} 予約
+              {type === "PATO_CALL" ? "夜伽CALL" : "御同伴"} 予約
             </h2>
           </div>
           <button onClick={onClose} className="text-zinc-500 hover:text-white transition-colors">

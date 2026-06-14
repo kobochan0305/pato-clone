@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 import { Star, MapPin, ArrowLeft, Zap, MessageSquare, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import BookingModal from "./BookingModal";
@@ -41,7 +42,16 @@ const TIER_PRICE: Record<string, { half: string; points: number }> = {
 
 export default function CastDetail({ cast }: { cast: Cast }) {
   const [bookingType, setBookingType] = useState<"PATO_CALL" | "CO_PATO" | null>(null);
+  const { data: session } = useSession();
   const price = TIER_PRICE[cast.tier];
+
+  function handleBooking(type: "PATO_CALL" | "CO_PATO") {
+    if (!session) {
+      window.location.href = "/login";
+      return;
+    }
+    setBookingType(type);
+  }
 
   return (
     <>
@@ -134,7 +144,7 @@ export default function CastDetail({ cast }: { cast: Cast }) {
           {/* Booking CTAs */}
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             <button
-              onClick={() => setBookingType("PATO_CALL")}
+              onClick={() => handleBooking("PATO_CALL")}
               disabled={!cast.available}
               className="flex items-center gap-3 gold-gradient text-black font-semibold px-5 py-4 rounded-xl hover:opacity-90 transition-opacity disabled:opacity-40"
             >
@@ -146,7 +156,7 @@ export default function CastDetail({ cast }: { cast: Cast }) {
             </button>
 
             <button
-              onClick={() => setBookingType("CO_PATO")}
+              onClick={() => handleBooking("CO_PATO")}
               className="flex items-center gap-3 bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-[#3a3a3a] text-white font-semibold px-5 py-4 rounded-xl transition-colors"
             >
               <MessageSquare size={18} className="text-zinc-400" />

@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import DashboardClient from "./DashboardClient";
 
-export const metadata = { title: "マイページ | pato" };
+export const metadata = { title: "マイページ | 夜伽会" };
 
 export default async function DashboardPage() {
   const session = await auth();
